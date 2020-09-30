@@ -15,8 +15,10 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->string('path');
-            $table->foreignId('dog_id')->constrained('dogs');
+            $table->string('url');
+            $table->unsignedBigInteger('dogs_id');
+            $table->foreign('dogs_id')->references('id')->on('dogs');
+            $table->timestamps();
         });
     }
 

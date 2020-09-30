@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
+
 class UserSeeder extends Seeder
 {
     /**
@@ -13,32 +14,44 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'id' => 1,
-            'name' => "Alice",
-            'email' => 'alice@gmail.com',
-            'password' => Hash::make('123456'),
-        ]);
+        DB::table('users')->insert(
+            [
+                'id' => 1,
+                'name' => "Pat Metheny",
+                'email' => "patmetheny@gmail.com",
+                'password' => Hash::make('123456'),
+                'address' => "Pat Metheny street, 89",
+            ]
+        );
 
-        DB::table('users')->insert([
-            'id' => 2,
-            'name' => "Bartolomeu",
-            'email' => 'bartolomeu@gmail.com',
-            'password' => Hash::make('123456'),
-        ]);
+        DB::table('users')->insert(
+            [
+                'id' => 2,
+                'name' => "Jimmy Hendrix",
+                'email' => "jimmyhendrix@gmail.com",
+                'password' => Hash::make('123456'),
+                'address' => "Jimmy Hendrix street, 89",
+            ]
+        );
 
-        DB::table('users')->insert([
-            'id' => 3,
-            'name' => "César",
-            'email' => 'cesar@gmail.com',
-            'password' => Hash::make('123456'),
-        ]);
+        DB::table('users')->insert(
+            [
+                'id' => 3,
+                'name' => "George Benson",
+                'email' => "georgebenson@gmail.com",
+                'password' => Hash::make('123456'),
+                'address' => "George Benson street, 89",
+            ]
+        );
 
-        DB::table('users')->insert([
-            'id' => 4,
-            'name' => "Danilo",
-            'email' => 'danilo@gmail.com',
-            'password' => Hash::make('123456'),
-        ]);
+        DB::table('users')->insert(
+            [
+                'id' => 4,
+                'name' => "Eric Johnson",
+                'email' => "ericjohnson@gmail.com",
+                'password' => Hash::make('123456'),
+                'address' => "Eric J. street, 89",
+            ]
+        );
     }
 }

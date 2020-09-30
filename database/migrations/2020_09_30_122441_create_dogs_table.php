@@ -16,9 +16,14 @@ class CreateDogsTable extends Migration
         Schema::create('dogs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('user_id')->constrained('users');;
-            $table->year('birth_year');
-            $table->boolean('sex');
+            $table->string('photo')->nullable();
+            $table->string('bio', 1000);
+            $table->string('breed', 100);
+            $table->date('birth');
+            $table->enum('gender', ['m', 'f']);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
         });
     }
 
