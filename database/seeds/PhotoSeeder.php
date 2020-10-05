@@ -13,19 +13,19 @@ class PhotoSeeder extends Seeder
         DB::table('photos')->insert(
             [
                 'url' => 'caminhoParaFoto1.jpg',
-                'dogs_id' => 1
+                'dog_id' => 1
             ]
         );
         DB::table('photos')->insert(
             [
                 'url' => 'caminhoParaFoto2.jpg',
-                'dogs_id' => 1
+                'dog_id' => 1
             ]
         );
         DB::table('photos')->insert(
             [
                 'url' => 'caminhoParaFoto3.jpg',
-                'dogs_id' => 1
+                'dog_id' => 1
             ]
         );
     }
