@@ -8,6 +8,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public function dogs(){
+        return $this->hasMany('\App\Dog');
+    }
+
     use Notifiable;
 
     /**

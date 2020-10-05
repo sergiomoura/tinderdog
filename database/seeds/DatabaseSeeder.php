@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
          $this->call(DogSeeder::class);
          $this->call(LikeSeeder::class);
          $this->call(MessageSeeder::class);
+         $this->call(PhotoSeeder::class);
     }
 }
