@@ -10,4 +10,8 @@ class Message extends Model
         return $this->belongsTo('App\Dog','sender_id');
     }
 
+    public function recipient(){
+        return $this->belongsTo('App\Dog', 'recipient_id'); 
+    }
+
 }

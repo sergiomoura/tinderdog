@@ -25,4 +25,8 @@ class Dog extends Model
     public function messagesByMe(){
         return $this->hasMany('App\Message','sender_id');
     }
+
+    public function messagesForMe(){
+        return $this->hasMany('App\Message', 'recipient_id');
+    }
 }
