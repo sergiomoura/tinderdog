@@ -55,8 +55,8 @@ class DogSeeder extends Seeder
                             'bio' => 'Gata de quatro patas',
                             'breed' => 'Vira Lata',
                             'birth' => '2016-03-05',
-                            'gender' => 'm',
-                            'user_id'=> 4
+                            'gender' => 'f',
+                            'user_id'=> 1
                         ]
                         );
     }

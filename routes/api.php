@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::get('/{id}/feed','DogsController@feed');
+Route::get('/{id}/matches','DogsController@matches');
+Route::get('/users/{id}/dogs','UsersController@dogs');
+
+// 1 - Criar a rota get para /users/{id}/dogs e direciona-la para o UsersController@dogs
+// 2 - Criar o controller UsersController
+// 3 - Criar o metodo dogs no UsersController
+// 4 - Fazer com que o metodo dogs retorne todos os dogs do usuario

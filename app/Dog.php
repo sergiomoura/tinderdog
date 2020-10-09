@@ -29,4 +29,8 @@ class Dog extends Model
     public function messagesForMe(){
         return $this->hasMany('App\Message', 'recipient_id');
     }
+
+    public function oppositeSex(){
+        return Dog::where('gender','<>',$this->gender)->get();
+    }
 }
